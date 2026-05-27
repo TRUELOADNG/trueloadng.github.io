@@ -1,113 +1,243 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trueload Nigeria | Order Materials</title>
+<title>Trueload Nigeria</title>
+
 <style>
-:root{--green:#0a8f3c;--dark:#0b3d20;--light:#f4f7f5}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--light);color:#222}
-header{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1581092160607-ee22731c9c4b');background-size:cover;background-position:center;color:#fff;padding:70px 20px;text-align:center}
-header h1{font-size:34px;margin-bottom:10px}
-header p{font-size:16px;margin-bottom:20px}
-.cta{display:inline-block;padding:14px 24px;background:var(--green);color:#fff;text-decoration:none;border-radius:6px;font-weight:bold}
-.container{padding:20px;max-width:1000px;margin:auto}
-.section{background:#fff;margin:18px 0;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
-h2{color:var(--green)}
-input, select, textarea{width:100%;padding:10px;margin:8px 0;border-radius:5px;border:1px solid #ccc}
-.button{display:inline-block;margin-top:10px;padding:12px 18px;background:var(--green);color:#fff;text-decoration:none;border-radius:5px;border:none;cursor:pointer}
-footer{text-align:center;padding:25px;font-size:14px;color:#555}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+header {
+  background: #0a7d3b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  background: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #0a7d3b;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: #0a7d3b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media(min-width:768px){
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.icon {
+  font-size: 28px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Trueload Nigeria</h1>
-<p>Order Verified Sand & Granite in Minutes</p>
+  <h1>Trueload Nigeria</h1>
+  <p>Reliable Logistics & Verified Materials</p>
 </header>
 
-<div class="container">
+<section class="hero">
+  <h1>Reliable Logistics & Verified Building Materials</h1>
+  <p>
+    From construction materials to general goods delivery and vehicle towing,
+    Trueload ensures safe, transparent, and efficient movement across Lagos and Nigeria.
+  </p>
+  <a href="https://wa.me/2348110463609" class="btn">Order via WhatsApp</a>
+</section>
 
-<div class="section">
-<h2>Place Your Order</h2>
-<form id="orderForm">
+<section class="section">
+  <h2 style="text-align:center;">Our Services</h2>
+  <div class="grid">
 
-<label>Material Type</label>
-<select id="material">
-<option>Filling Sand</option>
-<option>Sharp Sand</option>
-<option>Plaster Sand</option>
-<option>Granite (1/2)</option>
-<option>Granite (3/4)</option>
-<option>Granite (1 inch)</option>
-<option>Laterite</option>
-<option>Stone Dust</option>
-</select>
+    <div class="card">
+      <div class="icon">🏗️</div>
+      <h3>Materials Supply</h3>
+      <p>Sand, granite, cement, iron rods and more.</p>
+    </div>
 
-<label>Tonnage</label>
-<select id="tonnage">
-<option>20 Tons</option>
-<option>25 Tons</option>
-<option>30 Tons</option>
-</select>
+    <div class="card">
+      <div class="icon">🚛</div>
+      <h3>Logistics & Delivery</h3>
+      <p>Transport for goods, construction materials and bulk loads.</p>
+    </div>
 
-<label>Delivery Location</label>
-<input type="text" id="location" placeholder="e.g. Ajah, Ikorodu, Lekki">
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3>Vehicle Towing</h3>
+      <p>Breakdown recovery and vehicle relocation services.</p>
+    </div>
 
-<label>Delivery Date</label>
-<input type="date" id="date">
+  </div>
+</section>
 
-<label>Additional Note</label>
-<textarea id="note" placeholder="Anything we should know?"></textarea>
+<section class="section">
+  <h2 style="text-align:center;">Materials We Supply</h2>
+  <div class="grid">
 
-<button type="button" class="button" onclick="sendOrder()">Send Order on WhatsApp</button>
+    <div class="card">
+      <div class="icon">🟤</div>
+      <h3>Sand & Aggregates</h3>
+      <p>Sharp sand, plaster sand, filling sand, granite, stone dust.</p>
+    </div>
 
-</form>
-</div>
+    <div class="card">
+      <div class="icon">🧱</div>
+      <h3>Base Materials</h3>
+      <p>Laterite, hardcore, cement.</p>
+    </div>
 
-<div class="section">
-<h2>How It Works</h2>
-<ol>
-<li>Fill the form</li>
-<li>Click send</li>
-<li>We confirm price & availability</li>
-<li>Truck is dispatched</li>
-</ol>
-</div>
+    <div class="card">
+      <div class="icon">🔩</div>
+      <h3>Reinforcement</h3>
+      <p>Iron rods and binding wire.</p>
+    </div>
 
-<div class="section">
-<h2>Contact</h2>
-<p>08110463609 | 09166757048</p>
-<p>Lagos & Across Nigeria</p>
-</div>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <h2 style="text-align:center;">Logistics Services</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🚚</div>
+      <h3>Tipper Trucks</h3>
+      <p>10T – 30T trucks for materials delivery.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>General Delivery</h3>
+      <p>Pickup, vans and lorries for goods transport.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏢</div>
+      <h3>Bulk Haulage</h3>
+      <p>Project-based and site-to-site movement.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3>Vehicle Towing</h3>
+      <p>Accident recovery and breakdown towing.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Get Started with Trueload</h2>
+
+  <div class="grid">
+
+    <div class="card" style="text-align:center;">
+      <div class="icon">📦</div>
+      <h3>Order Materials / Delivery</h3>
+      <p>Request materials, logistics or towing services.</p>
+      <a href="#" class="btn">Place an Order</a>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <div class="icon">🚛</div>
+      <h3>Join as a Driver</h3>
+      <p>Register your truck and start getting jobs.</p>
+      <a href= https://forms.gle/inMfMuN6SGjBb5uN6class="btn">Register Now</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center;">Why Choose Trueload?</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>✔ Verified Loads</h3>
+      <p>No short supply. What you pay for is what you get.</p>
+    </div>
+
+    <div class="card">
+      <h3>✔ Trusted Network</h3>
+      <p>Verified drivers and suppliers only.</p>
+    </div>
+
+    <div class="card">
+      <h3>✔ Reliable Delivery</h3>
+      <p>Fast and dependable service.</p>
+    </div>
+
+  </div>
+</section>
 
 <footer>
-© 2026 Trueload Nigeria
+  <p>📞 08110463609 | 09166757048</p>
+  <p>📍 Lagos & Across Nigeria</p>
+  <p>© Trueload Nigeria</p>
 </footer>
-
-<script>
-function sendOrder(){
-  let material = document.getElementById('material').value;
-  let tonnage = document.getElementById('tonnage').value;
-  let location = document.getElementById('location').value;
-  let date = document.getElementById('date').value;
-  let note = document.getElementById('note').value;
-
-  let message = `Hello Trueload,%0A
-I want to order materials:%0A
-Material: ${material}%0A
-Tonnage: ${tonnage}%0A
-Location: ${location}%0A
-Delivery Date: ${date}%0A
-Note: ${note}`;
-
-  let url = `https://wa.me/2348110463609?text=${message}`;
-  window.open(url, '_blank');
-}
-</script>
-
+<a href="https://wa.me/2348110463609" target="_blank" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:18px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:999;
+">
+WhatsApp
+</a>
 </body>
 </html>
